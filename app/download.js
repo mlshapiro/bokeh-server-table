@@ -1,7 +1,7 @@
 var data = source.data;
 
 // need to write csv parser
-// var filetext = 'name,income,years_experience\n';
+var filetext = 'name,income,years_experience\n';
 // for (i=0; i < data['name'].length; i++) {
 //     var currRow = [data['name'][i].toString(),
 //                    data['salary'][i].toString(),

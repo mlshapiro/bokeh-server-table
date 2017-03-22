@@ -17,7 +17,7 @@ The following process should get you up and running from a fresh new server inst
 
 ## Set up nginx
 
-- `$ ln -s /root/bokeh-server-table/nginx.conf /etc/nginx/sites-available/bokeh`
+- `$ ln -s /root/bokeh-server-table/conf/nginx.conf /etc/nginx/sites-available/bokeh`
 - `$ sudo ln -s /etc/nginx/sites-available/bokeh /etc/nginx/sites-enabled/`
 - `$ sudo rm /etc/nginx/sites-enabled/default`  
 - `$ sudo systemctl start nginx`
@@ -26,7 +26,7 @@ The following process should get you up and running from a fresh new server inst
 
 This will run server in the background on start up
 
-- `$ sudo cp bokeh.service /etc/systemd/system`
+- `$ sudo cp conf/bokeh.service /etc/systemd/system`
 - `$ sudo systemctl daemon-reload`
 - `$ sudo systemctl start bokeh.service`
 

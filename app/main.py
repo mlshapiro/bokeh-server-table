@@ -8,8 +8,6 @@ from bokeh.models.widgets import Slider, Button, DataTable, TableColumn, NumberF
 from bokeh.io import curdoc
 
 # import data from excel
-# master = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=[1,2,3])
-# simp = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=3)
 master = pd.read_excel(join(dirname(__file__), 'master.xlsx'), sheetname='Master Data', header=[1,2,3])
 simp = pd.read_excel(join(dirname(__file__), 'master.xlsx'), sheetname='Master Data', header=3)
 
@@ -32,9 +30,6 @@ def update():
     
     # select only certain columns for export
     exp = df[['Company Name','Company Address (HQ)', 'Company City (HQ)', 'Company State (HQ)', 'POC Name', 'POC Title', 'POC Email']]
-    
-    # reset index to get rid of integers
-    # exp = exp.set_index(['Company Name'])
 
     # put data in source dictionary
     source.data = {
