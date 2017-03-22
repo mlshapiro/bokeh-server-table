@@ -8,8 +8,10 @@ from bokeh.models.widgets import Slider, Button, DataTable, TableColumn, NumberF
 from bokeh.io import curdoc
 
 # import data from excel
-master = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=[1,2,3])
-simp = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=3)
+# master = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=[1,2,3])
+# simp = pd.read_excel('export_csv/master.xlsx', sheetname='Master Data', header=3)
+master = pd.read_excel(join(dirname(__file__), 'master.xlsx'), sheetname='Master Data', header=[1,2,3])
+simp = pd.read_excel(join(dirname(__file__), 'master.xlsx'), sheetname='Master Data', header=3)
 
 # create a source data table
 source = ColumnDataSource(data=dict())
