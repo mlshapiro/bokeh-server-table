@@ -21,16 +21,25 @@ Developed on a new Ubuntu 16.04 on digital ocean
 `$ sudo rm /etc/nginx/sites-enabled/default`
 `$ sudo systemctl start nginx`
 
+### Other controls: 
+ 
+`$ sudo systemctl stop nginx`
+`$ sudo systemctl start nginx`
+
 ## Install service
+
+This will run server in the background on start up
 
 `$ chmod ugo+x bokeh.service`
 `$ sudo cp bokeh.service /etc/systemd/system`
 `$ sudo systemctl daemon-reload`
+`$ sudo systemctl start bokeh.service`
 
-## Control nginx
- 
-`$ sudo systemctl stop nginx`
-`$ sudo systemctl start nginx`
+## Visit URL
+
+You should be able to visit the ip address of your server and see your bokeh app running.
+
+# Other Commands
 
 ## Set up ufw
 
