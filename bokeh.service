@@ -1,0 +1,11 @@
+[Unit]
+Description=Bokeh server instance
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+ExecStart=/root/anaconda3/bin/bokeh serve /root/bokeh-server-table --port 5100 --host 104.131.166.196:80
+
+[Install]
+WantedBy=multi-user.target
